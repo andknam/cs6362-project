@@ -1,3 +1,9 @@
+#Andrew Nam
+#November 2022
+
+#Modification of the original Variational Causal Network
+#class code
+
 import os, sys
 import os.path as osp
 import numpy as np
