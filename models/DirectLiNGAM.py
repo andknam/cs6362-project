@@ -1,5 +1,7 @@
 #Marco Barbero Mota
 #November 2022
+#This script makes significant use of the
+#DirectLiNGAM package by Shohei Shimizu et al.
 
 # %%
 import matplotlib.pyplot as plt
