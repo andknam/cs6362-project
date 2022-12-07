@@ -1,3 +1,7 @@
+#Marco Barbero Mota
+#November 2022
+
+
 # %%
 #Generate plot for the Ground truth DAG
 import networkx as nx
