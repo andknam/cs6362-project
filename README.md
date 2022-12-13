@@ -8,8 +8,8 @@ VCN adapted from: https://github.com/yannadani/vcn_pytorch (instructions located
 
 Boostrapped DirectLiNGAM adapted from: https://github.com/cdt15/lingam
 
-**Data:** \
-Data and verified ground truth source: 
+**Data** (and verified ground truth source): 
+ 
 1) https://pubmed.ncbi.nlm.nih.gov/15845847/ 
 2) https://arxiv.org/abs/1805.03108
 \
