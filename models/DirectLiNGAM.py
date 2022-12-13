@@ -128,7 +128,7 @@ if __name__ == '__main__':
     #dataset_name = 'orig_data.txt'
 
     #get data
-    data = pd.read_csv('./data/'+dataset_name, sep=',')
+    data = pd.read_csv('../protein_data/'+dataset_name, sep=',')
 
     #get the proteins (DAG nodes data)
     prot_data = data.loc[:,'raf':'jnk']

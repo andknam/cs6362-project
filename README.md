@@ -5,6 +5,8 @@ Final project for cs6362: advanced machine learning
 **Motivating question**: How do Variational Causal Networks (VCNs) approximation of the posterior over Direct Acyclic Graphs (DAGs) in causal structure learning compare to the boostrapped estimation via Direct LiNGAM in high dimensional settings?
 
 VCN adapted from: https://github.com/yannadani/vcn_pytorch \
+Instructions to run VCN are located in models/vcn_adapted \ 
+
 Boostrapped DirectLiNGAM adapted from: https://github.com/cdt15/lingam
 
 **Data:** \

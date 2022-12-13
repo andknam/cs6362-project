@@ -9,16 +9,13 @@ You can install the dependencies using
 `pip install -r requirements.txt
 `
 
-Create Directory structure which looks as follows: `[save_path]/er_1/`
-If using the protein data set: `[save_path]/prot_1/`
-
 ## Examples
 
 Run
 
-`python main.py --num_nodes [num_nodes] --epochs 10000 --save_path [save_path]`
+`python main.py --num_nodes [num_nodes] --epochs [num_epochs] --save_path [save_path]`
 
-`python main.py --num_nodes [num_nodes] --epochs 1000 --data_type prot -save_path [save_path] --early_stop`
+`python main.py --num_nodes 11 --epochs 1000 --data_type prot -save_path ../../vcn_results/all_results/ --early_stop`
 
 	@article{annadani2021variational,
 	title={Variational Causal Networks: Approximate Bayesian Inference over Causal Structures},

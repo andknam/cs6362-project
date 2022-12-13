@@ -9,7 +9,7 @@ if __name__ == '__main__':
     specific_run = num_nodes + '_10_20_100_0.001_1000.0_False'
     result_folder = 'results_dim_' + num_nodes
     result_file = 'prediction_results.pkl'
-    file_path = '/home/andrew/vcn_adapted/all_results/' + result_folder + '/prot_1/' + specific_run + '/' + result_file
+    file_path = './all_results/' + result_folder + '/prot_1/' + specific_run + '/' + result_file
 
     plot_name = 'elbo_full_epoch_dim_' + num_nodes 
     plot_path = 'plots/' + plot_name + '.pdf'
