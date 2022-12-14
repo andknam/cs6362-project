@@ -138,37 +138,37 @@ if __name__ == '__main__':
     # DAG discovery in this method, although it could also be leveraged
     treatment_data = data.iloc[:,-9:]
 
-# %%
-bootstrapped_model, lingam_model = bootstrapping(data = prot_data,
-n_bootstrap=500,
-save_graph=True,
-file_name='500_bootstrap')
-#%%
-p_values = get_pvalue_heatmap(lingam_model,prot_data,plot_heatmap=True, 
-    heatmap_filename='p-value heatmap.pdf')
-#%%
-#Mean bootstrapping adjancency matrix
-mean_adjacency = np.mean(bootstrapped_model.adjacency_matrices_, axis = 0)
-#0.85 threshold (Sachs et al.) mean matrix
-binarized_mean_pred = (mean_adjacency>0.85).astype(float)
+    # %%
+    bootstrapped_model, lingam_model = bootstrapping(data = prot_data,
+    n_bootstrap=500,
+    save_graph=True,
+    file_name='500_bootstrap')
+    #%%
+    p_values = get_pvalue_heatmap(lingam_model,prot_data,plot_heatmap=True, 
+        heatmap_filename='p-value heatmap.pdf')
+    #%%
+    #Mean bootstrapping adjancency matrix
+    mean_adjacency = np.mean(bootstrapped_model.adjacency_matrices_, axis = 0)
+    #0.85 threshold (Sachs et al.) mean matrix
+    binarized_mean_pred = (mean_adjacency>0.85).astype(float)
 
-#posterior dictionary and MAP predicted adjacency matrix
-posterior_dict, MAP_pred = bootstrapped_posterior_over_DAGs(bootstrapped_model)
+    #posterior dictionary and MAP predicted adjacency matrix
+    posterior_dict, MAP_pred = bootstrapped_posterior_over_DAGs(bootstrapped_model)
 
-#Get ground truths
-sup_GT = get_supplemented_ground_truth_adj_matrix()[0]
-# %%
-#Plot differences with the GT
-#MAP
-matrix2heatmap(MAP_pred-sup_GT,x_labels=prot_data.columns.values, 
-    y_labels=prot_data.columns.values,
-    color_bar_legend=None, heatmap_filename='MAP-GT.pdf',
-    color_bar=False, discrete_heatmap = True, cmap = 'Blues')
-print('MAP accuracy: ', DAG_accuracy(MAP_pred,sup_GT))
-#Binarized mean
-matrix2heatmap(binarized_mean_pred-sup_GT,x_labels=prot_data.columns.values, 
-    y_labels=prot_data.columns.values,
-    color_bar_legend=None, heatmap_filename='85_mean-GT.pdf',
-    color_bar=False, discrete_heatmap = True, cmap = 'Blues')
-print('Binarized mean accuracy: ', DAG_accuracy(binarized_mean_pred,sup_GT))
-# %%
+    #Get ground truths
+    sup_GT = get_supplemented_ground_truth_adj_matrix()[0]
+    # %%
+    #Plot differences with the GT
+    #MAP
+    matrix2heatmap(MAP_pred-sup_GT,x_labels=prot_data.columns.values, 
+        y_labels=prot_data.columns.values,
+        color_bar_legend=None, heatmap_filename='MAP-GT.pdf',
+        color_bar=False, discrete_heatmap = True, cmap = 'Blues')
+    print('MAP accuracy: ', DAG_accuracy(MAP_pred,sup_GT))
+    #Binarized mean
+    matrix2heatmap(binarized_mean_pred-sup_GT,x_labels=prot_data.columns.values, 
+        y_labels=prot_data.columns.values,
+        color_bar_legend=None, heatmap_filename='85_mean-GT.pdf',
+        color_bar=False, discrete_heatmap = True, cmap = 'Blues')
+    print('Binarized mean accuracy: ', DAG_accuracy(binarized_mean_pred,sup_GT))
+    # %%
