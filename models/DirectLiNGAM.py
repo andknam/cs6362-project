@@ -18,8 +18,6 @@ from lingam.utils import make_dot
 from utils import *
 import networkx as nx
 
-plt.style.use('science')
-
 # %%
 def get_pvalue_heatmap(model, data, plot_heatmap = False, heatmap_filename = None):
 #p-values of independence between nodes
