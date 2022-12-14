@@ -13,6 +13,6 @@ You can also install the development version of lingam package from GitHub:
 This scrip makes use of `graphviz` (https://pypi.org/project/graphviz/) and `networkx` (https://networkx.org/) for plotting purposes
 
 ### To reproduce experiments
-Run main section of `Direct LiNGAM.py`  
+Run main section of `DirectLiNGAM.py`  
 
 You may require to change the path to the protein data according to your local installation
