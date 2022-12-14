@@ -1,6 +1,8 @@
 # cs6362-project
 
-Final project for cs6362: advanced machine learning 
+Final project for cs6362: advanced machine learning
+
+Manuscript available upon request
 
 **Motivating question**: How do Variational Causal Networks (VCNs) approximation of the posterior over Direct Acyclic Graphs (DAGs) in causal structure learning compare to the boostrapped estimation via Direct LiNGAM in high dimensional settings?
 
@@ -22,3 +24,6 @@ line 4199-4997: u0126 \
 line 4998-5845: ly \
 line 5846-6758: pma \
 line 6759-7465: b2camp
+
+**Future work**
+ELBO gradient score function estimator variance reduction for more optimal learning within VCNs using control variates.
