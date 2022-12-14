@@ -4,10 +4,10 @@ Requirest installation of the original `lingam` package.
 
 To install lingam package, use pip as follows:
 
-$ pip install lingam
+`$ pip install lingam`
 You can also install the development version of lingam package from GitHub:
 
-$ pip install git+https://github.com/cdt15/lingam.git
+`$ pip install git+https://github.com/cdt15/lingam.git`
 
 ### To reproduce experiments
 Run main section of `Direct LiNGAM.py`  
